@@ -78,17 +78,17 @@ for(let i = 0; i < squares.length; i++){
 	squares[i].addEventListener("click", function() {
 		let clickedColor = this.style.backgroundColor;
 		if(clickedColor === pickedColor) {
-			if (((score > 40) && (order === 1)) || (score >=80)) {
-				messageDisplay.textContent = "Hey Champ, Free Tonight?!";
+			if (((score > 40) && (order === 1)) || (score >=90)) {
+				messageDisplay.textContent = "Superb!!";
 			}
 			else if ((score === 40) && (order === 1)) {
 				messageDisplay.textContent = "Nice!";
 			}
-			else if (((score >= 30) && (order === 1)) || (score >=40) && (order === 3)) {
-				messageDisplay.textContent = "Nevermind! Full score is not for everyone";
+			else if (((score >= 30) && (order === 1)) || (score >=60) && (order === 3)) {
+				messageDisplay.textContent = "Nice!";
 			}
 			else {
-				messageDisplay.textContent = "Ew, Wipe your glasses Bruh!";
+				messageDisplay.textContent = "LoL!";
 			}
 			resetButton.textContent = "Play Again?";
 			changeColors(clickedColor);
