@@ -100,7 +100,10 @@ button:hover {
         width: 10%;
     }
     #colorDisplay {
-        font-size: 170%;
+        font-size: 130%;
+    }
+    button {
+        font-size: 0.75rem;
     }
 }
 
