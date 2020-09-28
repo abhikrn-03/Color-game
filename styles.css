@@ -11,7 +11,7 @@ body {
     margin: 1.5%;
     margin-bottom: 2%;
     float: left;
-    border-radius: 15%;
+    border-radius: 12%;
     transition: background 0.6s;
     -webkit-transition: background 0.6s;
     -moz-transition: background 0.6s;
@@ -29,27 +29,46 @@ body {
 h1 {
     color: white;
     text-align: center;
+    font-size: 1.5rem;
     line-height: 1.1;
     padding: 20px 0;
     font-weight: normal;
     text-transform: uppercase;
     margin: 0;
-    background: steelblue;
+    background: rgb(0,22,14);
+    background: linear-gradient(90deg, rgb(0,22,14) 0%, rgb(23,215,178) 100%);
 }
 
 #colorDisplay {
-    font-size: 200%;
+    font-size: 3rem;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 0.75rem #fff, 0 0 1.5rem #fff, 0 0 2.25rem #02aecc;
+  }
+
+  to {
+    text-shadow: 0 0 1.5rem #fff, 0 0 2.25rem #38dffc, 0 0 3rem #38dffc;
+  }
 }
 
 #message {
     display: inline-block;
     width: 25%;
     font-weight: bold;
+    color: #a4f5d3;
 }
 
 #space {
     display: inline-block;
-    width: 25%; 
+    width: 25%;
 }
 
 button {
@@ -60,35 +79,39 @@ button {
     border: none;
     margin: 0;
     height: 100%;
-    color: steelblue;
+    color: #a4f5d3;
     transition: all 0.4s;
     outline: none;
 }
 
 #stripe {
-    background: white;
+  background: rgb(0,22,14);
+  background: linear-gradient(90deg, rgba(15,158,130,1) 0%, rgba(0,22,14,1) 100%);
     color: black;
     text-align: center;
     height: 30px;
 }
 
 .selected {
-    background: steelblue;
-    color: white;
+  color: rgb(0,22,14);
+  background: #a4f5d3;
 }
 
 button:hover {
-    color: white;
-    background: steelblue;
+    color: rgb(0,22,14);
+    background: #a4f5d3;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 660px) {
   .square {
       width: 34%;
       padding-bottom: 20%;
       margin: 4% 8%;
       margin-bottom: 2%;
       border-radius: 12%;
+    }
+    h1 {
+      font-size: 1rem;
     }
     #container {
         margin-top: 20px;
@@ -100,10 +123,12 @@ button:hover {
         width: 10%;
     }
     #colorDisplay {
-        font-size: 130%;
+        font-size: 2rem;
     }
     button {
-        font-size: 0.75rem;
+      font-size: 0.75rem;
+    }
+    #message {
+      visibility: hidden;
     }
 }
-
