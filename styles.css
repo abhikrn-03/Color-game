@@ -251,13 +251,15 @@ button:hover {
     .footer span{
       font-size: 0.55rem;
       margin: 0% 4%;
+      padding-bottom: 0%;
     }
     .copyright {
+      display: none;
       font-size: 0.5rem;
     }
     .footer {
       margin-top: 0.5%;
       padding-top: 0.5%;
-      height: 4%;
+      height: 3.2%;
     }
 }
