@@ -17,6 +17,8 @@ let scoreDisplay = document.getElementById("score");
 let footer = document.querySelector(".footer");
 let footerlink = document.querySelector(".footer-link");
 let fb = document.querySelector("#fb");
+let baby = document.getElementById("baby");
+let kids = document.getElementById("kids");
 
 for(let i = 0; i < modeButtons.length; i++) {
 	modeButtons[i].addEventListener("click", function() {
@@ -112,6 +114,7 @@ for(let i = 0; i < squares.length; i++){
 			else {
 				messageDisplay.textContent = "Ew! Wipe your glasses bruh!";
 			}
+			rightMusic();
 			resetButton.textContent = "Restart";
 			changeColors(clickedColor);
 			h1.style.backgroundImage = "linear-gradient(90deg, rgb(0,0,0) 0%," + clickedColor + " 50%, rgb(255,255,255) 100%)";
@@ -122,6 +125,7 @@ for(let i = 0; i < squares.length; i++){
 			scoreDisplay.textContent = score;
 		} else {
             // this.style.backgroundColor = "#232323";
+						wrongMusic();
             $(this).slideUp(1000);
 			messageDisplay.textContent = "Oops!!";
 			score = score - 10;
@@ -171,4 +175,12 @@ function togglenav() {
   } else {
     x.className = "navbar";
   }
+}
+
+function wrongMusic() {
+	baby.play();
+}
+
+function rightMusic() {
+	kids.play();
 }
